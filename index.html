@@ -161,9 +161,22 @@
     <section class="machinery-section" id="projects">
         <div class="container">
             <h2 class="section-title center-align" data-aos="fade-up">Danh Mục Máy Móc & Thiết Bị Đo Lường</h2>
-            <div class="equipment-showcase" data-aos="fade-up">
-                <img src="machinery-list.png" alt="Danh Mục Máy Móc" class="equip-img">
-                <img src="measurement-equipment.png" alt="Thiết Bị Đo Lường" class="equip-img">
+            
+            <div class="equipment-tabs" data-aos="fade-up">
+                <button class="tab-btn active" onclick="openTab(event, 'machinery')"><i class="fa-solid fa-cogs"></i> Danh Mục Máy Móc</button>
+                <button class="tab-btn" onclick="openTab(event, 'measurement')"><i class="fa-solid fa-ruler-combined"></i> Thiết Bị Đo Lường</button>
+            </div>
+
+            <div id="machinery" class="tab-content active" data-aos="fade-up">
+                <div class="equip-img-wrapper">
+                    <img src="machinery-list.png" alt="Danh Mục Máy Móc" class="equip-img">
+                </div>
+            </div>
+
+            <div id="measurement" class="tab-content">
+                <div class="equip-img-wrapper">
+                    <img src="measurement-equipment.png" alt="Thiết Bị Đo Lường" class="equip-img">
+                </div>
             </div>
             
             <h3 class="sub-title-projects" data-aos="fade-up">Một số dự án chế tạo Jig cơ khí, PCBA</h3>
@@ -243,6 +256,18 @@
             offset: 80,
             duration: 800,
         });
+
+        // Tab function
+        function openTab(evt, tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
