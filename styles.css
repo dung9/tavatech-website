@@ -549,17 +549,24 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
 }
 
-.projects-image-showcase {
-    margin-top: 4rem;
-    text-align: center;
+.project-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    background: #f1f5f9;
 }
 
-.projects-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border: 1px solid var(--border-color);
+.project-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-card-img {
+    transform: scale(1.1);
 }
 
 /* Footer */
