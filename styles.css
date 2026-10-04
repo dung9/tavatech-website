@@ -549,6 +549,19 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
 }
 
+.projects-image-showcase {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.projects-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border: 1px solid var(--border-color);
+}
+
 /* Footer */
 .footer {
     background: #001a33;
