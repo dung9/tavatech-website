@@ -135,27 +135,50 @@ h1, h2, h3, h4 {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
+    text-decoration: none;
 }
 
-.logo-icon {
-    color: var(--primary-teal);
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 4px;
+    transition: var(--transition);
 }
 
-.logo-icon-white {
-    color: var(--primary-teal);
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
-.logo-text-blue {
-    color: var(--primary-blue);
+.footer-logo-img {
+    height: 70px;
+    width: auto;
+    border-radius: 8px;
+    background: var(--white);
+    padding: 8px;
+    transition: var(--transition);
 }
 
-.logo-text-white {
-    color: var(--white);
+.logo:hover .footer-logo-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 164, 128, 0.4);
+}
+
+.hero-logo-img {
+    height: 140px;
+    width: auto;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border: 3px solid rgba(255,255,255,0.4);
+    transition: var(--transition);
+    background: var(--white); /* In case it's transparent, ensure contrast */
+    padding: 10px;
+}
+
+.hero-logo-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 164, 128, 0.5);
+    border-color: var(--primary-teal);
 }
 
 .nav-links {
